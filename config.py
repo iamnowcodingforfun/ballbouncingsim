@@ -1,3 +1,5 @@
+Gravity = 0.01
+
 #LOOKS
 Aspect_ratio = 9 / 16
 Height = 960 #in pixels
@@ -18,4 +20,4 @@ Ball_grow_effect_enabled = False
 Ball_shrink_effect_enabled = False
 
 Circle_shrink_effect_enabled = False
-Circle_grow_effect_enabled = True
+Circle_grow_effect_enabled = False
