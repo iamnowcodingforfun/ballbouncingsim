@@ -33,7 +33,7 @@ ball_dy = ball_speed * math.sin(ball_angle)
 
 
 screen = pygame.display.set_mode((WIDTH, Height))
-pygame.display.set_caption('Bouncing Ball with Gravity in a Circle (9:19 Aspect Ratio)')
+pygame.display.set_caption('ball bouncing sim')
 
 
 running = True
