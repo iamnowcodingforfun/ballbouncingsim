@@ -6,7 +6,7 @@ from config import *
 pygame.init()
 
 WIDTH = int(Height * Aspect_ratio)
-
+trail = []
 if Circle_grow_effect_enabled:
     radius_cahnger = 3.5
 else:
@@ -39,7 +39,6 @@ while running:
     ball_y += ball_dy
     
     ball_dy += gravity
-    
     dist_to_center = math.sqrt((ball_x - circle_center[0])**2 + (ball_y - circle_center[1])**2)
     if dist_to_center >= circle_radius - Ball_size:
 
@@ -51,15 +50,15 @@ while running:
         ball_dy = ball_speed * math.sin(reflection_angle)
 
         if Ball_grow_effect_enabled:
-            Ball_size += effect_strenght
+            Ball_size *= effect_strenght
         if Ball_shrink_effect_enabled:
-            Ball_size -= effect_strenght
+            Ball_size *= effect_strenght *-1 + 2
 
         if Circle_shrink_effect_enabled:
-            radius_cahnger += effect_strenght * 0.05
+            radius_cahnger += effect_strenght * 0.1
             circle_radius = min(WIDTH, Height) // radius_cahnger 
         if Circle_grow_effect_enabled:
-            radius_cahnger -= effect_strenght * 0.05
+            radius_cahnger -= effect_strenght * 0.1
             circle_radius = min(WIDTH, Height) // radius_cahnger
         
         # Adjust ball position to stay on the circle's boundary
