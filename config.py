@@ -14,7 +14,7 @@ circlecolor = (0, 255, 0)
 #EFFECT STRENGHT IS AT THIS POINT IN TIME GLOBAL WITH ALL EFFECTS
 
 #EFFECTS
-effect_strenght = 1
+effect_strenght = 1.1
 
 Ball_grow_effect_enabled = False
 Ball_shrink_effect_enabled = False
